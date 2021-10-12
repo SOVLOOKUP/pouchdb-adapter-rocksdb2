@@ -1,0 +1,1 @@
+## pouchdb-adapter-rocksdb2
