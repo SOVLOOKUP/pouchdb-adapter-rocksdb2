@@ -1,6 +1,6 @@
 {
   "name": "pouchdb-adapter-rocksdb2",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "pouchdb-adapter-rocksdb2",
   "main": "src/index.js",
   "types":"index.d.ts",
