@@ -1,8 +1,9 @@
 {
   "name": "pouchdb-adapter-rocksdb2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "pouchdb-adapter-rocksdb2",
   "main": "main.js",
+  "types":"main.d.ts",
   "author": "sovlookup <gonorth@qq.com>",
   "license": "MIT",
   "dependencies": {
