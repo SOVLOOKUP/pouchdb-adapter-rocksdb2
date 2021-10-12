@@ -1,3 +1,3 @@
 type Plugin = 'This should be passed to PouchDB.plugin()'
-
-export default Plugin
+declare const rocksdb: Plugin
+export default rocksdb
