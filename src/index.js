@@ -1,15 +1,17 @@
-const CoreLevelPouch = require('pouchdb-adapter-leveldb-core')
-const rocksdb = require('pouchdb')
+import CoreLevelPouch from 'pouchdb-adapter-leveldb-core'
+import rocksdb from 'rocksdb'
 
 function RocksAdapter(opts, callback) {
-    let newOpts = Object.assign(
-        {
-            db: rocksdb,
-        },
-        opts,
-    )
+    let newOpts = Object.assign({
+        db: rocksdb
+    }, opts)
+    let TempPouch = CoreLevelPouch
 
-    CoreLevelPouch.call(this, newOpts, callback)
+    if (typeof TempPouch.call !== "function") {
+        TempPouch = CoreLevelPouch.default
+    }
+
+    TempPouch.call(this, newOpts, callback)
 }
 
 RocksAdapter.valid = function () {
@@ -18,6 +20,6 @@ RocksAdapter.valid = function () {
 
 RocksAdapter.use_prefix = false
 
-exports.default = function (PouchDB) {
+export default function (PouchDB) {
     PouchDB.adapter('rocksdb', RocksAdapter, true)
 }
