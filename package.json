@@ -1,6 +1,6 @@
 {
   "name": "pouchdb-adapter-rocksdb2",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "pouchdb-adapter-rocksdb2",
   "main": "index.js",
   "types": "index.d.ts",
@@ -16,5 +16,10 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0"
-  }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md"
+  ]
 }
